@@ -19,7 +19,7 @@ void myscene::initImage()
 {
     for(int i=0; i<64; i++)
     {
-        item[i] = new myitem(":/f3");//8x8每个图标初始化图片
+        item[i] = new myitem(":/source_pic/f3");//8x8每个图标初始化图片
         item[i]->setPos(item[i]->boundingRect().width()*(i%8), item[i]->boundingRect().height()*(i/8));//8x8排列摆放
         this->addItem(item[i]);//每个item添加到scene上面
         a[i/8][i%8] = 0;//每个item背后的值赋值为0
@@ -43,7 +43,7 @@ void myscene::Update()//游戏结束时调用显示所有的地雷
         {
             if(a[index/8][index%8] == 1)
             {
-                item[index] = new myitem(":/l1");//地雷
+                item[index] = new myitem(":/source_pic/l1");//地雷
                 item[index]->setPos(item[index]->boundingRect().width()*(index%8), item[index]->boundingRect().height()*(index/8));
                 this->addItem(item[index]);
             }

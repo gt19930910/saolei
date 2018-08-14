@@ -2,7 +2,7 @@
 
 myscenemain::myscenemain(QObject *parent) : QGraphicsScene(parent)
 {
-    QString path=":/zhujiemian";
+    QString path=":/source_pic/zhujiemian";
     itemmain = new myitemmain(path);
     this->addItem(itemmain);
 }

@@ -36,66 +36,55 @@ void myitem::setNum(int j, int k)
         boomNum++;
     switch(boomNum)
     {
-        case 1: item[8*j+k]->setPixmap(QPixmap(":/11")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 2: item[8*j+k]->setPixmap(QPixmap(":/22")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 3: item[8*j+k]->setPixmap(QPixmap(":/33")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 4: item[8*j+k]->setPixmap(QPixmap(":/44")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 5: item[8*j+k]->setPixmap(QPixmap(":/55")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 6: item[8*j+k]->setPixmap(QPixmap(":/66")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 7: item[8*j+k]->setPixmap(QPixmap(":/77")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 8: item[8*j+k]->setPixmap(QPixmap(":/88")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
-        case 0: item[8*j+k]->setPixmap(QPixmap(":/f2"));
+        case 1: item[8*j+k]->setPixmap(QPixmap(":/source_pic/11")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 2: item[8*j+k]->setPixmap(QPixmap(":/source_pic/22")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 3: item[8*j+k]->setPixmap(QPixmap(":/source_pic/33")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 4: item[8*j+k]->setPixmap(QPixmap(":/source_pic/44")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 5: item[8*j+k]->setPixmap(QPixmap(":/source_pic/55")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 6: item[8*j+k]->setPixmap(QPixmap(":/source_pic/66")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 7: item[8*j+k]->setPixmap(QPixmap(":/source_pic/77")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 8: item[8*j+k]->setPixmap(QPixmap(":/source_pic/88")); item[8*j+k]->IsflagOrwhiteblock += 2; Success++; break;
+        case 0: item[8*j+k]->setPixmap(QPixmap(":/source_pic/f2"));
         if(j < 7 && j > 0 && k < 7 && k > 0 && item[8*j+k]->spreadFlag == 0)
         {
             Success++;
             item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j+1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k+1);
-            item[8*j+k]->spreadFlag = 1;
         }
         if(j == 0 && (k != 0) && (k != 7) && item[8*j+k]->spreadFlag == 0)//up
         {
             Success++;
+            item[8*j+k]->spreadFlag = 1;
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j+1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k+1);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((k == 0) && (j != 0) && (j != 7) && item[8*j+k]->spreadFlag == 0)//left
         {
             Success++;
+            item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j+1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k+1);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((j == 7) && (k != 0) && (k != 7) && item[8*j+k]->spreadFlag == 0)//down
         {
             Success++;
+            item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k+1);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((k == 7) && (j != 0) && (j != 7) && item[8*j+k]->spreadFlag == 0)//right
         {
             Success++;
+            item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
             setNum(j+1, k);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((k == 0) && (j == 0) && item[8*j+k]->spreadFlag == 0)
         {
@@ -103,7 +92,6 @@ void myitem::setNum(int j, int k)
             item[8*j+k]->spreadFlag = 1;
             setNum(j, k+1);
             setNum(j+1, k);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((k == 7) && (j == 7) && item[8*j+k]->spreadFlag == 0)
         {
@@ -111,7 +99,6 @@ void myitem::setNum(int j, int k)
             item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
          }
         if((j == 7) && (k == 0) && item[8*j+k]->spreadFlag == 0)
         {
@@ -119,7 +106,6 @@ void myitem::setNum(int j, int k)
             item[8*j+k]->spreadFlag = 1;
             setNum(j-1, k);
             setNum(j, k+1);
-            item[8*j+k]->spreadFlag = 1;
         }
         if((k == 7)&&(j == 0) && item[8*j+k]->spreadFlag == 0)
         {
@@ -127,7 +113,6 @@ void myitem::setNum(int j, int k)
             item[8*j+k]->spreadFlag = 1;
             setNum(j+1, k);
             setNum(j, k-1);
-            item[8*j+k]->spreadFlag = 1;
         }
         item[8*j+k]->IsflagOrwhiteblock += 2;
 
@@ -145,20 +130,20 @@ void myitem::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     }else if(event->button() == Qt::LeftButton && flag == 1 && IsflagOrwhiteblock == 0)
     {
-        this->setPixmap(QPixmap(":/l1"));
+        this->setPixmap(QPixmap(":/source_pic/l1"));
         gameoverFlag = 1;
 
     }else if(event->button() == Qt::RightButton && flag == 1)
     {
         if(IsflagOrwhiteblock == 0)
         {
-            this->setPixmap(QPixmap(":/q1"));
+            this->setPixmap(QPixmap(":/source_pic/q1"));
             IsflagOrwhiteblock++;
             flagNum++;
 
         }else if(IsflagOrwhiteblock == 1)
         {
-            this->setPixmap(QPixmap(":/f3"));
+            this->setPixmap(QPixmap(":/source_pic/f3"));
             IsflagOrwhiteblock--;
             flagNum--;
         }
@@ -167,16 +152,16 @@ void myitem::mousePressEvent(QGraphicsSceneMouseEvent *event)
     {
         if(IsflagOrwhiteblock == 0)
         {
-            this->setPixmap(QPixmap(":/q1"));
+            this->setPixmap(QPixmap(":/source_pic/q1"));
             IsflagOrwhiteblock++;
         }else if(IsflagOrwhiteblock == 1)
         {
-               this->setPixmap(QPixmap(":/f3"));
+               this->setPixmap(QPixmap(":/source_pic/f3"));
                IsflagOrwhiteblock--;
         }
     }else if(event->button() == Qt::MidButton && flag == 1 && IsflagOrwhiteblock == 0)
     {
-        this->setPixmap(QPixmap(":/q1"));
+        this->setPixmap(QPixmap(":/source_pic/q1"));
         flagNum++;
     }
     Click++;
