@@ -1,6 +1,6 @@
 #ifndef MYSCENE_H
 #define MYSCENE_H
-#include"myitem.h"
+#include "myitem.h"
 #include <QObject>
 #include <QGraphicsScene>
 #include <QTime>

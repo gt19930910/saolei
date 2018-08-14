@@ -20,18 +20,19 @@ public:
     ~MainWindow();
 public slots:
     void Update();
-    void Updatecount();
+    void updateCount();
 private slots:
     void on_pushButton_clicked();
     void on_pushButtonrestart_clicked();
     void on_pushButtonexit_clicked();
+
 private:
     Ui::MainWindow *ui;
     myscene *sc;
     myscenemain *scmain;
-    QTimer *time_fail_or_win;
+    QTimer *timeFailorWin;
     QTime t;
-    QTimer *current_time;
+    QTimer *currentTime;
 };
 
 #endif // MAINWINDOW_H

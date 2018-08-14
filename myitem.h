@@ -10,12 +10,12 @@ class myitem : public QGraphicsPixmapItem
 {
 public:
     myitem(QString path);
-    int flag=0;
-    void setNum(int j,int k);
+    int flag = 0;
+    void setNum(int j, int k);
 private:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     int boomNum;
-    int IsflagOrwhiteblock;
+    int IsflagOrwhiteblock;//是否插旗
     int spreadFlag;
     int m_x;
     int m_y;
