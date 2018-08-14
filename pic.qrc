@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>11</file>
+        <file>22</file>
+        <file>33</file>
+        <file>44</file>
+        <file>55</file>
+        <file>66</file>
+        <file>77</file>
+        <file>88</file>
+        <file>1116</file>
+        <file>2216</file>
+        <file>3316</file>
+        <file>4416</file>
+        <file>5516</file>
+        <file>6616</file>
+        <file>7716</file>
+        <file>8816</file>
+        <file>f1</file>
+        <file>f2</file>
+        <file>f3</file>
+        <file>f216</file>
+        <file>f316</file>
+        <file>l1</file>
+        <file>l2</file>
+        <file>l116</file>
+        <file>q1</file>
+        <file>q116</file>
+        <file>z1</file>
+        <file>zhujiemian</file>
+        <file>zhujiemian2</file>
+    </qresource>
+</RCC>
