@@ -1,10 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-extern int Success;
 extern int gameoverFlag;
 extern int flagNum;
-int Click = 0;
+int Click = 0;//玩家需要点击了方块才会开始计时
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -40,7 +39,7 @@ void MainWindow::Update()
         timeFailorWin->stop();
         gameoverFlag--;
 
-    }else if(flagNum == 8 && Success > 10)
+    }else if(flagNum == 8)//所有的雷都找出来算成功
     {
         Click = 0;
         QMessageBox::information(this, "info", "you win!");//8*8 成功
